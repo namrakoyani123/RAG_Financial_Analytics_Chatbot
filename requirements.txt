@@ -1,0 +1,43 @@
+# RAG Finance Chatbot - 2026 Dependencies (Render Optimized)
+# ============================================================
+
+# Core Framework
+streamlit>=1.40.0
+python-dotenv>=1.0.0
+
+# LLMs (Primary: Groq, Fallback: OpenAI)
+openai>=1.50.0
+groq>=0.11.0
+
+# Vector Store & Embeddings
+chromadb>=0.5.0
+
+# Text Processing (Langchain)
+langchain-text-splitters>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+
+# Web Search (Primary: Tavily, Fallback: News API)
+tavily-python>=0.5.0
+newsapi-python>=0.2.7
+
+# PDF Processing
+PyPDF2>=3.0.0
+
+# Finance Data
+yfinance>=0.2.40
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+pillow>=10.0.0
+
+# HTTP/Networking
+requests>=2.31.0
+
+# Tokenization
+tiktoken>=0.7.0
