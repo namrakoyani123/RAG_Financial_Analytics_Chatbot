@@ -127,7 +127,7 @@ This project is licensed under the MIT License.
 
 ## 👩‍💻 Author
 
-**Namra**
+**Namra_Koyani**
 B.Tech Student | Developer | AI Enthusiast
 
 ---
