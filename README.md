@@ -1,65 +1,135 @@
-# RAG Finance Analytics Chatbot
+# 💰 RAG Financial Analytics Chatbot
 
-Personal Finance Assistant with RAG (Retrieval-Augmented Generation) capabilities.
+An intelligent **Personal Finance Assistant** powered by **Retrieval-Augmented Generation (RAG)**.
+This chatbot helps users analyze financial data, track assets, read finance news, and interact with documents using AI.
 
-## Features
-- 💬 AI Chat with OpenAI + Groq fallback
-- 📄 PDF upload and RAG-based Q&A
-- 📰 Finance news with NewsAPI + Tavily fallback
-- 📈 Asset tracking (stocks, forex, crypto)
-- 🛠️ Budgeting tools with 50/30/20 recommendations
+---
 
-## Environment Variables
+## 🚀 Features
 
-Set these in Render Dashboard → Environment:
+* 💬 **AI Chat Assistant**
+  Powered by OpenAI with Groq fallback for fast and reliable responses
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `OPENAI_API_KEY` | OpenAI API key for chat & embeddings | Yes |
-| `GROQ_API_KEY` | Groq API key (fallback LLM) | Optional |
-| `TAVILY_API_KEY` | Tavily API for web search | Optional |
-| `NEWS_API_KEY` | NewsAPI for finance news | Optional |
-| `AV_API_KEY` | Alpha Vantage for stock data | Optional |
+* 📄 **PDF Upload & Q&A (RAG)**
+  Upload financial documents and ask questions using contextual retrieval
 
-## Deploy to Render
+* 📰 **Real-Time Finance News**
+  Integrated with NewsAPI and Tavily for latest updates
 
-1. Push this folder to GitHub
-2. Go to [render.com](https://render.com) → New → Web Service
-3. Connect your GitHub repo
-4. Set:
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true`
-5. Add environment variables in the Environment tab
-6. Deploy!
+* 📈 **Asset Tracking**
+  Track stocks, forex, and cryptocurrency data
 
-## Local Development
+* 🛠️ **Smart Budgeting Tools**
+  Get recommendations using the **50/30/20 rule**
+
+* ⚡ **Fallback System**
+  Ensures uninterrupted service using multiple APIs
+
+---
+
+## 🧠 Tech Stack
+
+* **Frontend:** Streamlit
+* **Backend:** Python
+* **LLMs:** OpenAI, Groq
+* **RAG Pipeline:** LangChain / Vector Store
+* **APIs:** NewsAPI, Tavily, Alpha Vantage
+
+---
+
+## 📂 Project Structure
+
+```
+RAG_Financial_Analytics_Chatbot/
+│── app.py
+│── requirements.txt
+│── Procfile
+│── utils/
+│── data/
+│── README.md
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file or set variables in your deployment platform:
+
+```
+OPENAI_API_KEY=your_openai_key
+GROQ_API_KEY=your_groq_key
+TAVILY_API_KEY=your_tavily_key
+NEWS_API_KEY=your_newsapi_key
+AV_API_KEY=your_alpha_vantage_key
+```
+
+---
+
+## 💻 Local Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/namrakoyani123/RAG_Financial_Analytics_Chatbot.git
+
+# Navigate into the folder
+cd RAG_Financial_Analytics_Chatbot
+
 # Install dependencies
 pip install -r requirements.txt
 
-# Run locally
+# Run the app
 streamlit run app.py
 ```
 
-## API Keys Setup
+---
 
-Your `.env` file should look like:
+## 🌐 Deployment (Render)
+
+1. Push your project to GitHub
+2. Go to Render → New Web Service
+3. Connect your repository
+4. Set:
+
 ```
-OPENAI_API_KEY=sk-...
-GROQ_API_KEY=gsk_...
-TAVILY_API_KEY=tvly-...
-NEWS_API_KEY=...
-AV_API_KEY=...
+Build Command:
+pip install -r requirements.txt
+
+Start Command:
+streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
 ```
 
-## Troubleshooting
+5. Add environment variables
+6. Deploy 🚀
 
-**Blank page on Render?**
-- Make sure `Procfile` exists with correct start command
-- Check that environment variables are set
-- View logs in Render dashboard
+---
 
-**Chat not working?**
-- Verify `OPENAI_API_KEY` is set correctly
-- Groq will be used as fallback if OpenAI fails
+## 🛠️ Future Improvements
+
+* 📊 Advanced financial analytics dashboard
+* 🤖 Voice-based interaction
+* 📱 Mobile app version
+* 📉 AI-powered investment suggestions
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to fork this repo and submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👩‍💻 Author
+
+**Namra**
+B.Tech Student | Developer | AI Enthusiast
+
+---
+
+⭐ If you like this project, don’t forget to star the repository!
